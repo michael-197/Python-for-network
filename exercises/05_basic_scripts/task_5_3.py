@@ -63,3 +63,20 @@ trunk_template = [
     "switchport mode trunk",
     "switchport trunk allowed vlan {}",
 ]
+
+
+mode = input('Введите режим работы интерфейса (access/trunk): ')
+interface = input('Введите тип и номер интерфейса: ')
+vlans = input('Введите номер влан(ов): ')
+
+print()
+print('interface', interface)
+# создаем словарь device с  ключами acceess ,  trunk. Содержимое словоря: списки.
+device = {
+       "access": access_template,
+       "trunk": trunk_template
+         }
+
+#применяем метод join к списку с разделителем "перевод каретки" для вывода строк
+print('\n'.join(device[mode]).format(vlans))
+

@@ -26,3 +26,16 @@
 """
 
 ip = "192.168.3.1"
+
+A=int(ip.split('.')[0]) 
+B=int(ip.split('.')[1]) 
+C=int(ip.split('.')[2]) 
+D=int(ip.split('.')[3]) 
+#a=bin(A)[2::]
+#b=bin(B)[2::]
+#c=bin(C)[2::]
+#d=bin(D)[2::]
+print("{:<10}{:<10}{:<10}{:<10}".format(A, B, C, D)) 
+print("{:08b}  {:08b}  {:08b}  {:08b}".format(A, B, C, D)) 
+
+

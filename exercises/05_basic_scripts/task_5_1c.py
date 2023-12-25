@@ -49,3 +49,21 @@ london_co = {
         "routing": True,
     },
 }
+
+
+print('имена устройств', sorted(london_co))
+name = input('Введите имя устройства(r1, r2, sw1): ')
+
+"""
+определение списка ключей в словарях устройств и преобразование 
+его в строку методом join:    ",".join(list_keys) 
+"""
+list_keys=list(london_co[name].keys())
+
+
+par = input('Введите имя параметра (' + ",".join(list_keys) + '): ')
+
+#проверка на несуществующий параметр par (ключи в словарях устройст)
+
+print(london_co[name].get(par, 'Такого параметра нет'))
+
